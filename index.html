@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para ti ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ELEMENTOS QUE FLOTAN -->
+    <div class="flotante uno">❤️</div>
+    <div class="flotante dos">🐾</div>
+    <div class="flotante tres">✨</div>
+    <div class="flotante cuatro">♡</div>
+    <div class="flotante cinco">🐶</div>
+    <div class="flotante seis">💗</div>
+
+    <main class="contenedor">
+
+        <!-- ========================= -->
+        <!-- PANTALLA 1 -->
+        <!-- ========================= -->
+
+        <section id="pantalla1" class="pantalla">
+
+            <div class="imagen-animada">
+                <img src="snoopy1.gif" alt="Snoopy">
+            </div>
+
+            <!-- ✏️ ESCRIBE SU NOMBRE -->
+            <h1>
+                Hola, Micaela❤️
+            </h1>
+
+            <!-- ✏️ PUEDES CAMBIAR ESTE TEXTO -->
+            <p class="texto">
+
+                Bueno antes de que tengas tiempo de pensar hay algo que te quiero dedicar, algo que te quiero demostrar tambien...
+
+                <br><br>
+
+                sabes que te quiero y te amo muchisimo verdad?
+
+            </p>
+
+            <!-- ✏️ ESCRIBE ALGO BONITO DE ELLA -->
+            <p class="frase">
+
+                Eres una de las personas más maravillosas
+                que he conocido y quiero seguir conociendo el resto de mis dias.
+
+            </p>
+
+            <button onclick="siguiente(2)">
+                Siguiente →
+            </button>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- PANTALLA 2 -->
+        <!-- ========================= -->
+
+        <section id="pantalla2" class="pantalla oculto">
+
+            <div class="imagen-animada">
+                <img src="snoopy2.gif" alt="Snoopy">
+            </div>
+
+            <h2>
+                Hay algo que siempre te quise decir y perdon si me demore mucho...
+            </h2>
+
+            <p class="texto">
+
+                Puedes darme unos segundos?...
+
+                <br><br>
+
+                es que se tarda un poco en cargar.
+
+            </p>
+
+            <!-- BARRA -->
+
+            <div class="barra">
+
+                <div id="barraCarga"></div>
+
+            </div>
+
+            <p class="porcentaje">
+                <span id="numeroCarga">0</span>%
+            </p>
+
+            <p class="broma">
+                🐶 Snoopy está haciendo todo el trabajo, ya tu sabes.
+            </p>
+
+            <button
+                id="botonCarga"
+                class="oculto"
+                onclick="siguiente(3)">
+
+                Procedemos? →
+
+            </button>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- PANTALLA 3 -->
+        <!-- ========================= -->
+
+        <section id="pantalla3" class="pantalla oculto">
+
+            <div class="imagen-animada">
+                <img src="perrito1.gif" alt="Perrito">
+            </div>
+
+            <h2>
+                Bueno... ahora sí.
+            </h2>
+
+            <!-- ✏️ CAMBIA ESTE TEXTO -->
+            <p class="texto">
+
+                Hay algo que llevo un tiempo
+                queriendo decirte y nuevamente disculpame si me demore demasiado en decirtelo pero queria que la primera sea.... bueno algo especial.
+
+                <br><br>
+
+               Eres una persona muy especial y importante para mi y nunca bromeo con eso, desde que llegaste a mi vida has sido la luz que ilumina todos mis dias del peor al mejor... y bueno desde que tu llegaste ahora solo tengo unos excelentes muy buenos dias...
+
+            </p>
+
+            <!-- ✏️ ESCRIBE ALGO PERSONAL -->
+            <p class="frase">
+
+                Quiero seguir creando buenos recuerdos contigo, buenas experiencias... todo quiero que seas mi todo...
+
+            </p>
+
+            <button onclick="siguiente(4)">
+                Seguimos? →
+            </button>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- PANTALLA 4 -->
+        <!-- ========================= -->
+
+        <section id="pantalla4" class="pantalla oculto">
+
+            <div class="terminal">
+
+                <div class="terminal-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <p>
+                    > Iniciando declaración...
+                </p>
+
+                <p>
+                    > Buscando a la mujer mas hermosa q obvio eres tu...
+                </p>
+
+                <p class="error">
+                    > ERROR 404:
+                    tu belleza excede los valores esperados...💀
+                </p>
+
+                <p>
+                    > Reintentando...
+                </p>
+
+                <p>
+                    > Reintentando nuevamente...
+                </p>
+
+                <p class="verde">
+                    > Mujer bella econtrada (te amo mucho) ✓
+                </p>
+
+            </div>
+
+            <div class="imagen-animada pequeño">
+                <img src="snoopy1.gif" alt="Snoopy">
+            </div>
+
+            <h2>
+                Creo que ya sabes a por donde va todo esto...
+            </h2>
+
+            <p class="texto">
+
+                Eres la mujer mas hermosa del mundo mi ojoncita bella, preciosa, linda....
+
+            </p>
+
+            <button onclick="siguiente(5)">
+                Final... ❤️
+            </button>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- PANTALLA FINAL -->
+        <!-- ========================= -->
+
+        <section id="pantalla5" class="pantalla oculto final">
+
+            <div class="imagen-final">
+
+                <img src="foto1.jpg" alt="Nosotros">
+
+            </div>
+
+            <div class="corazon">
+                ❤️
+            </div>
+
+            <h1>
+                Te amo demasiado
+            </h1>
+
+            <!-- ✏️ TU MENSAJE -->
+            <p class="texto">
+
+                Después de pensarlo bastante
+                y probablemente sobrepensarlo
+                demasiado...
+
+                <br><br>
+
+                quería decirte algo que de verdad
+                siento.
+
+            </p>
+
+            <!-- CÓDIGO -->
+
+            <div class="codigo">
+
+                <span class="morado">if</span>
+                (persona ==
+
+                <span class="rosa">
+                    "TÚ"
+                </span>
+                ) {
+
+                <br><br>
+
+                &nbsp;&nbsp;
+                sentimientos =
+
+                <span class="verde">
+                    true
+                </span>;
+
+                <br>
+
+                &nbsp;&nbsp;
+                miedo =
+
+                <span class="verde">
+                    mucho
+                </span>;
+
+                <br>
+
+                &nbsp;&nbsp;
+                ganas_de_decirlo =
+
+                <span class="verde">
+                    true
+                </span>;
+
+                <br><br>
+
+                }
+
+            </div>
+
+            <!-- ✏️ AQUÍ VA TU DECLARACIÓN -->
+
+            <h2 class="declaracion">
+                Me gustas demasiado muchisisisimo. ❤️
+            </h2>
+
+            <!-- ✏️ MENSAJE FINAL -->
+
+            <p class="texto">
+
+                Y bueno... ¿me harías el honor de poder ser tu novio y empezar a crear una bonita historia juntos, los dos? ❤️
+
+            </p>
+
+            <!-- ✏️ PON TU NOMBRE -->
+
+            <p class="firma">
+                — Eduardo
+            </p>
+
+            <div class="final-corazones">
+                ❤️ 🐶 ❤️ 🐾 ❤️
+            </div>
+            
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

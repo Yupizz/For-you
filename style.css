@@ -1,0 +1,641 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 80, 140, .18),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(140, 80, 255, .18),
+            transparent 30%
+        ),
+
+        #09090d;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contenedor {
+
+    width: min(92%, 650px);
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   PANTALLAS
+========================= */
+
+.pantalla {
+
+    background:
+        rgba(20, 20, 28, .96);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.55);
+
+    animation:
+        aparecer .7s ease;
+}
+
+.oculto {
+    display: none;
+}
+
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(.96);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1 {
+
+    font-size:
+        clamp(30px, 7vw, 44px);
+
+    margin-bottom: 20px;
+}
+
+h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TEXTOS
+========================= */
+
+.texto {
+
+    color: #d0d0d8;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin: 20px 0;
+}
+
+.frase {
+
+    color: #ff79ae;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    line-height: 1.6;
+
+    margin: 25px 0;
+}
+
+.broma {
+
+    color: #ff79ae;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   IMÁGENES
+========================= */
+
+.imagen-animada {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.imagen-animada img {
+
+    width: 180px;
+
+    height: 180px;
+
+    object-fit: contain;
+
+    animation:
+        flotarImagen 2.5s ease-in-out infinite;
+}
+
+.imagen-animada.pequeño img {
+
+    width: 130px;
+
+    height: 130px;
+}
+
+
+@keyframes flotarImagen {
+
+    0%, 100% {
+
+        transform:
+            translateY(0)
+            rotate(-3deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px)
+            rotate(3deg);
+
+    }
+}
+
+
+/* =========================
+   FOTO FINAL
+========================= */
+
+.imagen-final {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+
+.imagen-final img {
+
+    width: 190px;
+
+    height: 190px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border:
+        3px solid rgba(255,121,174,.5);
+
+    box-shadow:
+        0 10px 40px rgba(255,70,140,.2);
+
+    animation:
+        fotoEntrada 1s ease;
+}
+
+
+@keyframes fotoEntrada {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.7)
+            rotate(-5deg);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            rotate(0);
+
+    }
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f91,
+            #a653ff
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 25px;
+
+    transition: .25s;
+
+    box-shadow:
+        0 10px 30px
+        rgba(255,70,140,.2);
+}
+
+button:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(255,70,140,.4);
+}
+
+button:active {
+
+    transform:
+        scale(.96);
+}
+
+
+/* =========================
+   BARRA DE CARGA
+========================= */
+
+.barra {
+
+    width: 100%;
+
+    height: 10px;
+
+    background: #272731;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-top: 25px;
+}
+
+#barraCarga {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff4f91,
+            #a653ff
+        );
+
+    transition:
+        width .1s;
+}
+
+.porcentaje {
+
+    margin-top: 10px;
+
+    color: #888;
+
+    font-family: monospace;
+}
+
+
+/* =========================
+   TERMINAL
+========================= */
+
+.terminal {
+
+    background: #08080c;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    text-align: left;
+
+    font-family: monospace;
+
+    color: #aaa;
+
+    line-height: 1.8;
+}
+
+.terminal-top {
+
+    display: flex;
+
+    gap: 6px;
+
+    margin-bottom: 15px;
+}
+
+.terminal-top span {
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #555;
+}
+
+.terminal-top span:nth-child(1) {
+    background: #ff5f57;
+}
+
+.terminal-top span:nth-child(2) {
+    background: #febc2e;
+}
+
+.terminal-top span:nth-child(3) {
+    background: #28c840;
+}
+
+.error {
+    color: #ff5f70;
+}
+
+.verde {
+    color: #65e6a0;
+}
+
+.rosa {
+    color: #ff79ae;
+}
+
+.morado {
+    color: #ad91ff;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.corazon {
+
+    font-size: 70px;
+
+    animation:
+        latido 1.2s infinite;
+}
+
+@keyframes latido {
+
+    0%, 100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.15);
+
+    }
+}
+
+.codigo {
+
+    background: #08080c;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin: 25px 0;
+
+    text-align: left;
+
+    font-family: monospace;
+
+    line-height: 1.8;
+
+    color: #bbb;
+}
+
+.declaracion {
+
+    color: #ff79ae;
+
+    font-size: 36px;
+
+    margin: 25px 0;
+}
+
+.firma {
+
+    margin-top: 25px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+.final-corazones {
+
+    margin-top: 25px;
+
+    font-size: 25px;
+
+    letter-spacing: 8px;
+}
+
+
+/* =========================
+   ELEMENTOS FLOTANTES
+========================= */
+
+.flotante {
+
+    position: fixed;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    opacity: .35;
+
+    font-size: 30px;
+
+    animation:
+        flotar 8s linear infinite;
+}
+
+.uno {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.dos {
+    left: 20%;
+    animation-delay: 3s;
+}
+
+.tres {
+    left: 40%;
+    animation-delay: 1s;
+}
+
+.cuatro {
+    left: 65%;
+    animation-delay: 4s;
+}
+
+.cinco {
+    left: 80%;
+    animation-delay: 2s;
+}
+
+.seis {
+    left: 92%;
+    animation-delay: 5s;
+}
+
+
+@keyframes flotar {
+
+    from {
+
+        transform:
+            translateY(110vh)
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            translateY(-20vh)
+            rotate(360deg);
+
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width: 500px) {
+
+    .pantalla {
+
+        padding: 25px 20px;
+
+    }
+
+    .imagen-animada img {
+
+        width: 140px;
+
+        height: 140px;
+
+    }
+
+    .imagen-final img {
+
+        width: 150px;
+
+        height: 150px;
+
+    }
+
+    h2 {
+
+        font-size: 24px;
+
+    }
+
+    .texto {
+
+        font-size: 16px;
+
+    }
+
+}
